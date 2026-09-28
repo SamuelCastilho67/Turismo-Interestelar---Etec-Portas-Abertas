@@ -36,21 +36,21 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 3%;
-  padding-left: 170px;
+  padding: 15px 3%;
   box-shadow: 0 5px 20px rgba(34, 208, 214, 0.25);
   z-index: 1000;
   border-bottom: 2.5px solid #7adeeb;
 }
 
 .logo {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: bold;
-  background: linear-gradient(45deg, #0011fe, #8287df);
+  background: linear-gradient(45deg, #00d2ff, #3a7bd5);
   background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  white-space: nowrap;
 }
-
 header nav {
   flex: 3;
   display: flex;
