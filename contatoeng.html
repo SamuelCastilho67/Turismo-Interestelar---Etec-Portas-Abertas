@@ -7,7 +7,7 @@
   <link rel="icon" href="img/astronautasemfundo.png" type="image/png">
   <link rel="stylesheet" href="style.css">
 </head>
-<body id="inicio">
+<body>
 
   <header>
         <div class="logo">interstellar tourismr</div>
@@ -51,13 +51,31 @@
         </div>
 
         <div style="margin-bottom: 20px;">
+          <label for="telefone" style="display: block; margin-bottom: 8px; font-weight: 500; color: #00d2ff;">Phone Number:</label>
+          <input type="tel" id="telefone" name="telefone" placeholder="+1 (555) 000-0000" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: #fff; font-size: 15px;">
+        </div>
+
+        <div style="margin-bottom: 20px;">
           <label for="assunto" style="display: block; margin-bottom: 8px; font-weight: 500; color: #00d2ff;">Subject:</label>
           <input type="text" id="assunto" name="assunto" required placeholder="Ex: Question about Blue Origin packages" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: #fff; font-size: 15px;">
         </div>
 
+        <div style="margin-bottom: 20px;">
+          <label for="avaliacao" style="display: block; margin-bottom: 8px; font-weight: 500; color: #00d2ff;">Rate our website (0 to 5):</label>
+          <select id="avaliacao" name="avaliacao" required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(13, 2, 33, 0.9); color: #fff; font-size: 15px;">
+            <option value="" disabled selected>Select a rating</option>
+            <option value="0">0 - Very dissatisfied</option>
+            <option value="1">1 - Dissatisfied</option>
+            <option value="2">2 - Neutral</option>
+            <option value="3">3 - Satisfied</option>
+            <option value="4">4 - Very satisfied</option>
+            <option value="5">5 - Excellent</option>
+          </select>
+        </div>
+
         <div style="margin-bottom: 25px;">
-          <label for="mensagem" style="display: block; margin-bottom: 8px; font-weight: 500; color: #00d2ff;">Message:</label>
-          <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Write your message here..." style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: #fff; font-size: 15px; resize: none;"></textarea>
+          <label for="mensagem" style="display: block; margin-bottom: 8px; font-weight: 500; color: #00d2ff;">Message (optional):</label>
+          <textarea id="mensagem" name="mensagem" rows="5" placeholder="Write your message or feedback here (optional)..." style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: #fff; font-size: 15px; resize: none;"></textarea>
         </div>
 
         <button type="submit" class="btn-oficial" style="cursor: pointer; width: 100%; padding: 14px; font-size: 16px; font-weight: bold; border: none; border-radius: 8px; background: linear-gradient(135deg, #00d2ff, #3a7bd5); color: white; transition: opacity 0.3s ease;">
@@ -77,7 +95,7 @@
     <p>ETEC DE HORTOLÂNDIA 2026 – ©All rights reserved</p>
     <p><small>Non-profit academic work</small></p>
   </footer>
-    <a href="#inicio" id="btnTopo" class="btn-topo" title="Voltar ao início">▲ Topo</a>
+
   <script>
     document.getElementById('formContato').addEventListener('submit', function(event) {
       event.preventDefault();
